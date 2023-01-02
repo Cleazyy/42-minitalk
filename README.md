@@ -65,8 +65,8 @@ int main(void)
     return (0);
 }
 ```
-Le premier argument de la fonction signal est le numéro du signal pour lequel l'action doit être définie. 
-Le second argument est un pointeur vers une fonction qui sera exécutée lorsque le signal est reçu.  
+Le premier argument de la fonction signal est le numéro du signal pour lequel l'action doit être définie.  
+Le second argument est un pointeur vers une fonction qui sera exécutée lorsque le signal est reçu. 
 
 ### int pause(void) :
 La fonction pause est définie dans la bibliothèque unistd.h et est utilisée pour mettre en pause l'exécution du programme jusqu'à ce qu'un signal soit reçu.
@@ -118,7 +118,7 @@ Pour ce faire il faut donc comprendre les opérateurs bitwise pour faire de la m
 10. Le serveur va donc afficher ce caractère ascii et attendre un nouveau singal pour recommencer en boucle.
 
 ### Liens utiles :
-https://devstory.net/12281/operations-sur-les-bits#:~:text=1%2D%20Bitwise,par%20le%20processeur%20(processor).
-http://fabrice.sincere.pagesperso-orange.fr/cm_electronique/electronique_numerique20/annexe/conversion_decimal_hexa02.pdf
-https://www.binaryhexconverter.com/decimal-to-binary-converter
-http://ressources.univ-lemans.fr/AccesLibre/UM/Pedago/physique/02/divers/logicalc.html
+https://devstory.net/12281/operations-sur-les-bits#:~:text=1%2D%20Bitwise,par%20le%20processeur%20(processor)  
+http://fabrice.sincere.pagesperso-orange.fr/cm_electronique/electronique_numerique20/annexe/conversion_decimal_hexa02.pdf  
+https://www.binaryhexconverter.com/decimal-to-binary-converter  
+http://ressources.univ-lemans.fr/AccesLibre/UM/Pedago/physique/02/divers/logicalc.html  
