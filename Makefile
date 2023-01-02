@@ -6,7 +6,7 @@
 #    By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/09 10:35:06 by fluchten          #+#    #+#              #
-#    Updated: 2023/01/02 07:43:12 by fluchten         ###   ########.fr        #
+#    Updated: 2023/01/02 08:01:12 by fluchten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,10 +27,10 @@ SRCS_SV = server.c utils2.c
 OBJS_CL = $(addprefix $(SRCS_DIR)/, $(SRCS_CL:%.c=%.o))
 OBJS_SV = $(addprefix $(SRCS_DIR)/, $(SRCS_SV:%.c=%.o))
 
-%.o: %.c
-	${CC} ${CFLAGS} -I${INC_DIR} -c $< -o $@
-
 all: ${NAME}
+
+%.o: %.c
+	${CC} ${CFLAGS} -I ${INC_DIR} -c $< -o $@
 
 ${NAME}: ${NAME_CL} ${NAME_SV}
 
