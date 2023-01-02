@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:50:38 by fluchten          #+#    #+#             */
-/*   Updated: 2022/12/29 09:43:24 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/02 07:39:42 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	ft_send_char(pid_t pid, char c)
 			res = kill(pid, SIGUSR2);
 		if (res == -1)
 			ft_print_error("ERROR = Check if PID number is correct!\n");
-		usleep(100);
+		usleep(50);
 		i++;
 	}
 }
