@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 07:41:58 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/02 07:42:51 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/02 08:15:23 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,20 @@ static void	ft_print_pid(pid_t pid)
 static void	ft_handler(int signum)
 {
 	static int	count_bits = 0;
-	static int	i = 0;
+	static int	c = 0;
 
 	if (signum == SIGUSR1)
 	{
-		i |= (1 << count_bits);
+		c |= (1 << count_bits);
 		count_bits++;
 	}
 	else if (signum == SIGUSR2)
 		count_bits++;
 	if (count_bits == 8)
 	{
-		write(1, &i, 1);
+		write(1, &c, 1);
 		count_bits = 0;
-		i = 0;
+		c = 0;
 	}
 }
 
