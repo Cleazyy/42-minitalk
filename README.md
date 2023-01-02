@@ -68,6 +68,11 @@ int main(void)
 Le premier argument de la fonction signal est le numéro du signal pour lequel l'action doit être définie.  
 Le second argument est un pointeur vers une fonction qui sera exécutée lorsque le signal est reçu. 
 
+### int usleep(useconds_t usec) :
+La fonction usleep est une fonction de la bibliothèque C standard qui permet de suspendre l'exécution d'un programme pendant un certain nombre de microsecondes.  
+
+On pourra donc l'utiliser coté client pour mettre en pause le programme quelques microsecondes entre chaque signaux envoyés avec la fonction kill afin d'éviter que les signaux ne s'envoient trop rapidement et que le serveur n'ait pas le temps de les gérer.
+
 ### int pause(void) :
 La fonction pause est définie dans la bibliothèque unistd.h et est utilisée pour mettre en pause l'exécution du programme jusqu'à ce qu'un signal soit reçu.
 
