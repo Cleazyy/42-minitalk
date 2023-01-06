@@ -22,20 +22,16 @@ Un PID (Process ID) est un numéro unique attribué par le système d'exploitati
 
 int main(void) 
 {
-    pid_t pid;
-    
-    
-    pid = getpid();
+    pid_t pid = getpid();
     printf("Le PID du processus est %d\n", pid);
     return (0);
 }
 ```
 
 ### int kill(pid_t pid, int sig) :
-La fonction kill est une fonction du système Unix qui permet d'envoyer un signal à un processus en cours d'exécution.  Elle est définie dans la bibliothèque signal.h et est utilisée de la manière suivante :
+La fonction kill est une fonction du système Unix qui permet d'envoyer un signal à un processus en cours d'exécution.  
+Elle est définie dans la bibliothèque signal.h et est utilisée de la manière suivante :
 ```c
-#include <signal.h>
-
 int main(void)
 {
     kill(pid, SIGUSR1);
@@ -46,18 +42,14 @@ Le premier argument de la fonction kill est le PID (Process ID) du processus à 
 Le second argument est le numéro du signal à envoyer.
 
 ### void (*signal(int sig, void (*func)(int)))(int) :
-La fonction signal est une fonction du système Unix qui permet de définir l'action à effectuer lorsqu'un signal est reçu par un processus. Elle est définie dans la bibliothèque signal.h et est utilisée de la manière suivante :
+La fonction signal est une fonction du système Unix qui permet de définir l'action à effectuer lorsqu'un signal est reçu par un processus.  
+Elle est définie dans la bibliothèque signal.h et est utilisée de la manière suivante :
 ```c
-#include <signal.h>
-#include <stdio.h>
-
 void my_handler(int signum) 
-{ 
-    if (signum == SIGUSR1) 
-    { 
-        printf("Received SIGUSR1!\n"); 
-    } 
-} 
+{
+    if (signum == SIGUSR1)
+        printf("Received SIGUSR1!\n");
+}
 
 int main(void)
 {
@@ -118,12 +110,11 @@ Pour ce faire il faut donc comprendre les opérateurs bitwise pour faire de la m
 5. Le client va vérifier les arguments et convertir le PID passé en argument avec atoi pour l'utiliser.
 6. Nous utilisons ensuite appeler ft_send_str qui va boucler la chaîne jusqu'à ce qu'elle se finisse.
 7. Cette fonction va appeler la fonction ft_send_char pour chaque caractère.
-8. Cette dernière va convertir le caractère ascii en binaire et utiliser SIGUSR1 pour les 1 et SIGUSR2 pour les 0.
-9. Le serveur va utiliser le handler pour convertir le binaire vers un caractère ascii après avoir reçu les 8 bits via les signaux.
+8. Cette dernière va convertir le caractère ascii en binaire en utilisant SIGUSR1 pour les 1 et SIGUSR2 pour les 0.
+9. Le serveur va utiliser le handler pour convertir le binaire vers un caractère ascii bit par bit via les signaux.
 10. Le serveur va donc afficher ce caractère ascii et attendre un nouveau singal pour recommencer en boucle.
 
 ### Liens utiles :
 https://devstory.net/12281/operations-sur-les-bits#:~:text=1%2D%20Bitwise,par%20le%20processeur%20(processor)  
 http://fabrice.sincere.pagesperso-orange.fr/cm_electronique/electronique_numerique20/annexe/conversion_decimal_hexa02.pdf  
-https://www.binaryhexconverter.com/decimal-to-binary-converter  
 http://ressources.univ-lemans.fr/AccesLibre/UM/Pedago/physique/02/divers/logicalc.html  
