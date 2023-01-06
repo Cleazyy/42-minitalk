@@ -25,9 +25,6 @@ Un PID (Process ID) est un numéro unique attribué par le système d'exploitati
 
 > Nous pouvons obtenir le PID d'un processus en utilisant la fonction getpid de la bibliothèque unistd.h.  
 ```c
-#include <unistd.h>
-#include <stdio.h>
-
 int main(void) 
 {
     pid_t pid = getpid();
