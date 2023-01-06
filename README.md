@@ -1,7 +1,15 @@
 # minitalk
 Minitalk est un projet à réaliser dans le cursus de 42.
 
-## But du projet :
+### Installation :
+- Clone the repository
+- Use the make command to compile
+
+### Utilisation :
+```./server```  
+```./client <PID> <STRING_TO_SEND>```
+
+### But du projet :
 Réaliser un programme de communication permettant de passer une chaine de caractères d’un client vers un serveur à l'aide des signaux SIGUSR1 et SIGUSR2.
 
 ### Signaux UNIX :
