@@ -2,8 +2,8 @@
 Minitalk est un projet à réaliser dans le cursus de 42.
 
 ### Installation :
-- Clone the repository
-- Use the make command to compile
+- Cloner le répertoire.
+- Utiliser la commande make pour compiler le programme.
 
 ### Utilisation :
 ```./server```  
